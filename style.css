@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+body {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.aside_target {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.container_card {
+  background-image: url(./images/bg-card-front.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: grid;
+  align-items: center;
+  width: 25%;
+  height: 35%;
+  position: absolute;
+  top: 7%;
+  left: 10%;
+  /* outline: 1px solid red; */
+  grid-template-columns: 30% 30% 1fr;
+  grid-template-rows: 40% 1fr 1fr;
+  grid-template-areas:
+    "p1 p2 p3"
+    "p4 p4 p4"
+    "p5 p5 p6";
+  color: white;
+  border-radius: 7px;
+}
+
+.circulos {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  outline: 1px solid #ffffff;
+}
+
+.circulo-grande {
+  grid-area: p1;
+  align-self: center;
+  justify-self: end;
+  margin-right: 20px;
+}
+
+.circulo-chico {
+  width: 20px;
+  height: 20px;
+  grid-area: p2;
+  background: transparent;
+  /* margin-left: 10px; */
+}
+
+.number_card {
+  grid-area: p4;
+  letter-spacing: 3.7px;
+  justify-self: center;
+}
+
+.card_name {
+  grid-area: p5;
+  justify-self: center;
+}
+
+.card_vencimiento {
+  grid-area: p6;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.img_target {
+  position: absolute;
+  z-index: 1;
+  width: 95%;
+  height: 95%;
+}
+
+/* .front {
+  width: 95%;
+  height: 95%;
+} */
+
+.container_card-back {
+  width: 25%;
+  height: 35%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 18%;
+  /* outline: 1px solid red; */
+}
+
+/* .back {
+  width: 95%;
+  height: 95%;
+} */
+
+.codigo_cvv {
+  position: absolute;
+  top: 45%;
+  right: 15%;
+  color: white;
+  letter-spacing: 1.5px;
+  z-index: 2;
+}
+
+.form__data {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 48%;
+  height: 100%;
+  /* outline: 1px solid red; */
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.form__data-hidden {
+  display: none;
+}
+
+.form__data_title {
+  margin-left: 10px;
+}
+
+.form__data_input {
+  width: 320px;
+  height: 35px;
+  border: none;
+  margin: 10px;
+  outline: 0.5px solid rgba(142, 133, 147, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.outline-red {
+  outline: 1.5px solid red;
+}
+
+.form__data_datos {
+  display: flex;
+  width: 340px;
+  flex-wrap: wrap;
+}
+
+.form__data_title-mensaje {
+  color: red;
+  margin: 0 0 0 10px;
+  align-self: center;
+  display: none;
+}
+
+.mostrar_mensaje {
+  display: flex;
+}
+
+.form__data_title-datos {
+  width: 50%;
+}
+
+.form__data_title-datos-cvv {
+  width: 30%;
+  margin: 0;
+}
+
+.form__data_input-mes,
+.form__data_input-anio {
+  width: 70px;
+  margin: 10px 0 0 10px;
+}
+
+.form__data_input-cvv {
+  width: 145px;
+}
+
+.form__data_input-submit {
+  color: white;
+  background: black;
+  cursor: pointer;
+  outline:none;
+}
+
+.finis_form {
+  width: 48%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.finis_form-visibility {
+  display: none;
+}
+
+.finis_form_logo {
+  width: 70px;
+  height: 70px;
+  /* margin-top: 10px; */
+}
+
+/* .finis_form_title{
+  margin-top: 10px;
+}
+
+.finis_form_text{
+  margin-top: 10px;
+} */
+
+.finis_form_continue {
+  width: 80%;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .aside_target {
+    width: 30%;
+  }
+
+  .container_card {
+    width: 37%;
+  }
+
+  .number_card {
+    font-size: 20px;
+  }
+
+  .container_card-back {
+    width: 37%;
+  }
+
+  .form__data {
+    width: 40%;
+    right: 20px;
+  }
+
+  .form__data_input {
+    width: 90%;
+  }
+
+  .form__data_input-mes,
+  .form__data_input-anio {
+    width: 70px;
+    margin: 10px 0 0 10px;
+  }
+
+  .form__data_input-cvv {
+    width: 140px;
+  }
+
+  .outline-red {
+    outline: 1.5px solid red;
+  }
+
+  .form__data_input-submit {
+    outline: none;
+  }
+
+  .finis_form {
+    width: 40%;
+    right: 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  body {
+    flex-direction: column;
+  }
+
+  .aside_target {
+    width: 100%;
+    height: 250px;
+    background-image: url(./images/bg-main-mobile.png);
+    background-size: 100% 100%;
+  }
+
+  .container_card {
+    top: 18%;
+    left: 5%;
+    z-index: 5;
+    width: 80%;
+    height: 20%;
+  }
+
+  .container_card-back {
+    top: 5%;
+    width: 80%;
+    height: 20%;
+  }
+
+  .form__data {
+    width: 95%;
+    top: 40%;
+    height: 400px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+  }
+
+  .form__data_input-submit {
+    width: 80%;
+    align-self: center;
+  }
+
+  .finis_form {
+    top: 40%;
+    width: 95%;
+    height: 400px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .finis_form_continue {
+    align-self: center;
+  }
+
+  .margin-top{
+    margin-top: 20px;
+  }
+}

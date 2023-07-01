@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interctive card form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="aside_target">
+
+    </aside>
+    <figure class="container_card">
+        <button class="circulos circulo-grande"></button>
+        <button class="circulos circulo-chico"></button>
+        <h2 class="number_card digito">0000 0000 0000 0000</h2>
+        <h3 class="card_name nombre">jame appleseed</h3>
+        <h4 class="card_vencimiento">00/00</h4>
+    </figure>
+    <figure class="container_card-back">
+        <span class="codigo_cvv cvv">000</span>
+        <img src="./images/bg-card-back.png" alt="" class="img_target back">
+    </figure>
+    <form action="" class="form__data">
+        <label for="input-name" class="form__data_title">CARDHOLDER NAME</label>
+        <input type="text" class="form__data_input form__data_input-name nombre">
+        <label for="input-number" class="form__data_title">CARD NUMBER</label>
+        <input type="text" class="form__data_input form__data_input-number digito">
+        <span class="form__data_title form__data_title-mensaje">No puede contener letras</span>
+        <div class="form__data_datos">
+            <span class="form__data_title form__data_title-datos">EXP. DATE (MM/YY)</span>
+            <span class="form__data_title form__data_title-datos-cvv">CVV</span>
+            <input type="text" class="form__data_input form__data_input-mes mes" placeholder="MM">
+            <input type="text" class="form__data_input form__data_input-anio anio" placeholder="YY">
+            <input type="text" class="form__data_input form__data_input-cvv cvv" placeholder="CVV">
+        </div>
+        <input type="submit" value="Confirmar" class="form__data_input form__data_input-submit">
+    </form>
+    <section class="finis_form finis_form-visibility">
+        <img src="./images/icon-complete.svg" alt="" class="finis_form_logo margin-top">
+        <h1 class="finis_form_title margin-top">THANK YOU!</h1>
+        <p class="finis_form_text margin-top">We´ve added your card details</p>
+        <button class="finis_form_continue form__data_input-submit margin-top">Continue</button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
