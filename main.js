@@ -16,6 +16,8 @@ form.addEventListener("submit", (e) => {
 
 btn_continue.addEventListener("click", () => {
     location.reload()
+    localStorage.removeItem("mes_card")
+    localStorage.removeItem("mes_card")
     // document.querySelector(".form__data").classList.remove("form__data-hidden")
     // document.querySelector(".finis_form").classList.add("finis_form-visibility")
 })
